@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid black;
+}
+
+.searchBar {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: black;
+  border: transparent;
+  color: white;
+}
+
+.btns {
+  border-radius: 20px;
+  color: purple;
+}
+
+.btns:hover,
+.btns:focus {
+  background-color: black;
+  color: white;
+}
