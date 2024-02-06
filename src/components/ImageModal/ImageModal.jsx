@@ -25,8 +25,8 @@ export const ImageModal = ({ src, closetModal, value }) => {
         style={customStyles}
       >
         <div className={css.container}>
-          <img className={css.image} src={src}></img>
-          <button className={css.button} onClick={closetModal}>
+          <img className={css.image} src={src} />
+          <button type="button" className={css.button} onClick={closetModal}>
             Close Modal
           </button>
         </div>

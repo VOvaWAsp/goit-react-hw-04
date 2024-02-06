@@ -12,13 +12,14 @@ export const ImageCard = ({ items, isOpen }) => {
   //     setIsOpen(false);
   //   }
   return (
-    <a onClick={isOpen}>
-      {/* <a onClick={openModal}> */}
-      <div>
-        <img className={css.image} src={items.urls.small} alt={items.alt_description} />
-        {/* <ImageModal src={items.urls.regular} /> */}
-      </div>
-      {/* </a> */}
-    </a>
+    <div>
+      <img
+        className={css.image}
+        src={items.urls.small}
+        alt={items.alt_description}
+        onClick={() => isOpen(items.urls.regular)}
+      />
+      {/* <ImageModal src={items.urls.regular} /> */}
+    </div>
   );
 };

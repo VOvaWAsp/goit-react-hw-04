@@ -6,13 +6,15 @@ import ReactModal from 'react-modal';
 ReactModal.setAppElement('#root');
 
 export const ImageGallery = ({ items }) => {
-  let image = items.map(item => {
-    return item.urls.regular;
-  });
+  const [regular, setRegular] = useState(null);
+  //   let image = items.map(item => {
+  //     return item.urls.regular;
+  //   });
   const [state, setState] = useState(false);
 
-  const handleOpenModal = () => {
+  const handleOpenModal = regular => {
     setState(true);
+    setRegular(regular);
   };
 
   const handleCloseModal = () => {
@@ -30,7 +32,7 @@ export const ImageGallery = ({ items }) => {
           );
         })}
       </ul>
-      <ImageModal src={image} closetModal={handleCloseModal} value={state} />;
+      <ImageModal src={regular} closetModal={handleCloseModal} value={state} />;
     </div>
   );
 };
